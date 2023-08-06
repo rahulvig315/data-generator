@@ -1,0 +1,19 @@
+{
+  "name": "data-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@types/node": "^20.4.8"
+  },
+  "dependencies": {
+    "ts-lib": "^0.0.5",
+    "typescript": "^5.1.6"
+  }
+}

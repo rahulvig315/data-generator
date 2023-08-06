@@ -1,13 +1,10 @@
 import { faker } from "@faker-js/faker";
-// or, if desiring a different locale
-// import { fakerDE as faker } from '@faker-js/faker';
-
 import * as fs from "fs";
 
-const randomName = faker.person.fullName(); // Rowan Nikolaus
-const randomEmail = faker.internet.email();
-
-const generateMockCustomers = (numCustomers = 10, transactionLimit = 30) => {
+export const generateMockCustomers = (
+  numCustomers = 10,
+  transactionLimit = 30
+) => {
   return Array.from({ length: numCustomers }, (_, i) => i).map((customerI) => {
     let customer = generateRandomCustomer();
     let numTransactions = Math.floor(Math.random() * 100) % transactionLimit;
@@ -54,7 +51,7 @@ const generateRandomTransaction = (userId) => ({
 });
 
 fs.appendFile(
-  "results.json",
+  "customers/examples/results.json",
   JSON.stringify(generateMockCustomers()) as any,
   function (err) {
     if (err) throw err;
